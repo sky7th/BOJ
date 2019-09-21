@@ -1,4 +1,5 @@
 #완주하지 못한 선수
+# 수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.
 def solution(s,c):
     s.sort()
     c.sort()
@@ -15,6 +16,7 @@ def solution(participant, completion):
 
 
 #전화번호 목록
+# 전화번호부에 적힌 전화번호 중, 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다.
 def solution(pb):
     answer = True
     pb.sort()
@@ -36,6 +38,7 @@ def solution(phoneBook):
 
 
 #위장
+# 스파이가 가진 의상들이 담긴 2차원 배열 clothes가 주어질 때 서로 다른 옷의 조합의 수를 return 하도록 solution 함수를 작성해주세요.
 from collections import Counter
 
 def solution(clothes):
@@ -54,6 +57,7 @@ def solution(clothes):
 
 
 #베스트 앨범
+# 스트리밍 사이트에서 장르 별로 가장 많이 재생된 노래를 두 개씩 모아 베스트 앨범을 출시하려 합니다. 
 from collections import defaultdict
 
 def solution(genres, plays):

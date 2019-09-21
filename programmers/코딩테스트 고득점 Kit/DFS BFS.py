@@ -1,4 +1,5 @@
 #타겟 넘버
+# n개의 음이 아닌 정수가 있습니다. 이 수를 적절히 더하거나 빼서 타겟 넘버를 만들려고 합니다. 
 def DFS(numbers, target, index, num):
     if index == len(numbers):
         return 1 if num == target else 0
@@ -9,8 +10,7 @@ def DFS(numbers, target, index, num):
 
 def solution(numbers, target):
     return DFS(numbers, target, 0, 0)
-
-# 좋은 풀이
+#좋은 풀이
 def solution(numbers, target):
     if not numbers and target == 0 :
         return 1
@@ -21,7 +21,6 @@ def solution(numbers, target):
 
 
 #네트워크
-
 #좋은 풀이
 def solution(n, computers):
     answer = 0
@@ -45,7 +44,10 @@ def solution(n, computers):
         i+=1
     return answer
 
+
 #단어 변환
+# 두 개의 단어 begin, target과 단어의 집합 words가 있습니다. 
+# 아래와 같은 규칙을 이용하여 begin에서 target으로 변환하는 가장 짧은 변환 과정을 찾으려고 합니다.
 from collections import deque as queue
 
 transistable = lambda a,b: sum((1 if x!=y else 0) for x,y in zip(a,b)) == 1
@@ -70,7 +72,9 @@ def solution(begin, target, words):
 
     return 0
 
+
 #여행 경로
+# 주어진 항공권을 모두 이용하여 여행경로를 짜려고 합니다. 항상 ICN 공항에서 출발합니다.
 from collections import defaultdict 
 
 def dfs(graph, N, key, footprint):

@@ -10,6 +10,7 @@ def solution(n, lost, reserve):
     answer = n-len(lostSet)
     return answer
 
+
 #조이스틱
 def solution(name):
     name=list(name)
@@ -48,7 +49,9 @@ def solution(name):
                     
     return answer
 
+
 #큰 수 만들기
+# 어떤 숫자에서 k개의 수를 제거했을 때 얻을 수 있는 가장 큰 숫자를 구하려 합니다.
 def solution(number, k):
     length = len(number)
     if length > k:
@@ -68,7 +71,10 @@ def solution(number, k):
     else:
         return "0"
 
+
 #구명보트
+# 무인도에 갇힌 사람들을 구명보트를 이용하여 구출하려고 합니다. 
+# 구명보트는 작아서 한 번에 최대 2명씩 밖에 탈 수 없고, 무게 제한도 있습니다.
 def solution(people, limit):
     answer = 0
     people.sort()
@@ -85,7 +91,10 @@ def solution(people, limit):
         cnt += 1
     return cnt
 
+
 #섬 연결하기
+# n개의 섬 사이에 다리를 건설하는 비용(costs)이 주어질 때, 
+# 최소의 비용으로 모든 섬이 서로 통행 가능하도록 만들 때 필요한 최소 비용을 return 하도록 solution을 완성하세요.
 def solution(n, costs):
     costs.sort()
     connect = [costs[0][0]]
@@ -108,7 +117,9 @@ def solution(n, costs):
                 
     return answer
 
+
 #단속 카메라
+# 고속도로를 이동하는 모든 차량이 고속도로를 이용하면서 단속용 카메라를 한 번은 만나도록 카메라를 설치하려고 합니다.
 def solution(routes):
     answer = 1
     routes = sorted(routes)
@@ -121,7 +132,9 @@ def solution(routes):
             tmp = routes[i+1][1]
     return answer
 
+
 #저울
+# 하나의 양팔 저울을 이용하여 물건의 무게를 측정하려고 합니다.
 def solution(weight):
     weight.sort()
     sum = 1

@@ -23,6 +23,8 @@ def solution(answers):
 
 
 #소수 찾기
+# 한자리 숫자가 적힌 종이 조각이 흩어져있습니다. 
+# 흩어진 종이 조각을 붙여 소수를 몇 개 만들 수 있는지 알아내려 합니다.
 from itertools import permutations
 
 def isPrime(a):
@@ -45,6 +47,8 @@ def solution(numbers):
 
 
 #숫자 야구
+# 질문한 세 자리의 수, 스트라이크의 수, 볼의 수를 담은 2차원 배열 baseball이 매개변수로 주어질 때, 
+# 가능한 답의 개수를 return 하도록 solution 함수를 작성해주세요.
 #best
 def st_B(given, chosen):
     st = 0

@@ -1,4 +1,6 @@
 #가장 먼 노드
+# n개의 노드가 있는 그래프가 있습니다. 각 노드는 1부터 n까지 번호가 적혀있습니다.
+# 1번 노드에서 가장 멀리 떨어진 노드의 갯수를 구하려고 합니다.
 def solution(n, edge):
     g = [[] for _ in range(n)]
     dist = [0 for _ in range(n)]
@@ -19,6 +21,7 @@ def solution(n, edge):
     dist.sort(reverse=True)
 
     return dist.count(dist[0])
+
 
 #순위
 check = []
