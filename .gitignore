@@ -26,5 +26,5 @@ yarn-error.log*
 *.exe
 
 .gitignore.txt
-
+/ext
 .vscode/
