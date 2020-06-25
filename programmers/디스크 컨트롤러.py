@@ -1,26 +1,28 @@
-def solution(N, number):
-    answer = -1
-    DP = []
-
-    for i in range(1, 9):
-        num_set = {int(str(N) * i)}
-
-        for j in range(0, i - 1):
-            for x in DP[j]:
-                for y in DP[-j - 1]:
-                    num_set.add(x + y)
-                    num_set.add(x - y)
-                    num_set.add(x * y)
-
-                    if y != 0:
-                        num_set.add(x // y)
-
-        if number in num_set:
-            return i
-
-        DP.append(num_set)
-
-    return answer
+import heapq
 
 
-print(solution(5, 12))
+def solution(jobs):
+    answer = 0
+    last_time, now_time = -1, 0
+    waiting_tasks = []
+    count = 0
+    while count < len(jobs):
+        for index, job in enumerate(jobs):
+            request_time, running_time = job
+            if last_time < request_time <= now_time:
+                heapq.heappush(waiting_tasks, (running_time, index))
+
+        if not waiting_tasks:
+            now_time += 1
+            continue
+
+        _, task_index = heapq.heappop(waiting_tasks)
+        task_request_time, task_running_time = jobs[task_index]
+        task_total_time = now_time + task_running_time - task_request_time
+        answer += task_total_time
+
+        last_time = now_time
+        now_time += task_running_time
+        count += 1
+
+    return answer // len(jobs)
