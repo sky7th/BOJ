@@ -21,8 +21,6 @@ class Solution:
         return False
 
 
-
-
 # DP 풀이
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
